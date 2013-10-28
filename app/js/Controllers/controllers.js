@@ -1,6 +1,6 @@
 /* Controllers */
 
-function MainCtrl($scope) {
+function MainCtrl($scope, $http) {
 
 	$scope.world = "World";
 
