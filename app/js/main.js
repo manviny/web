@@ -3,6 +3,7 @@
 require.config({
 	paths : {
 		"jquery.min" : "jquery-1.8.0.min",
+		"zepto" : "vendor/zepto.min",
 		"angular" : "lib/angular/angular",
 		"jquery.easing" : "jquery.easing.1.3",
 		"bootstrap.min" : "bootstrap.min",
