@@ -1,16 +1,14 @@
 /* Controllers */
 
 function MainCtrl($scope, $http) {
-
-	$scope.world = "World";
-
-	// fetch data from server
-	$http({	
+	require(['config'], function(config){
+		// fetch data from server
+		$http({	
 			method: 'POST', 
-			url: 'http://yourUrl/some.json'
+			url: config.mascotas
 		}).success(function(data)
-	{
-		$scope.items = data.matches; // response data 
+		{
+			$scope.items = data.matches; // response data 
+		});
 	});
-
 }
