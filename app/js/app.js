@@ -26,6 +26,12 @@ define(
         app.factory(Services);
         app.directive(Directives);
 
+        // allow fetching json from external server
+        app.config(function($httpProvider){
+            delete $httpProvider.defaults.headers.common['X-Requested-With'];
+        });
+
+
         angular.bootstrap(document,["myApp"]);
 
         };
