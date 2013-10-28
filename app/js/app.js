@@ -11,19 +11,14 @@ define(
 
         var app = angular.module("myApp", [], function($routeProvider, $locationProvider) {
 
-            $routeProvider.
-                when('/', 
-                    { templateUrl: '/templates/Main.html', 
-                    controller: MainCtrl 
-                }).
-                when('/cerca-de-mi', 
-                    { templateUrl: '/templates/cerca-de-mi.html',   
-                    controller: MainCtrl 
-                }).
-                otherwise({
-                    redirectTo: '/templates/cerca-de-mi.html'
-                });
-
+            $routeProvider.when('/', {
+                templateUrl: '/templates/Main.html',
+                controller: MainCtrl
+            });
+            $routeProvider.when('/kk', {
+                templateUrl: '/templates/cerca-de-mi.html',
+                controller: MainCtrl
+            });
             $routeProvider.otherwise( { redirectTo: '/'} );
 
             $locationProvider.html5Mode(true);
